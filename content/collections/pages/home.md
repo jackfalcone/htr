@@ -5,7 +5,7 @@ title: 'Northern thailand'
 template: home
 lead: 'adventure starts where the road ends'
 updated_by: 7404e32d-858b-49fc-8c91-a3cc3da6aaf1
-updated_at: 1787561570
+updated_at: 1787562489
 label: 'Chiang Mai'
 assets_field: david-gardiner-vszcfz0avo-unsplash-2.jpg
 ---
