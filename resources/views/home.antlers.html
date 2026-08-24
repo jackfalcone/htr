@@ -1,19 +1,21 @@
 <div class="mt-6 min-h-screen">
     <div class="max-w-lg mx-auto mt-3 mb-12">
             {{ partial:components.heading }}
-                NORTHERN THAILAND
+                {{ title }}
             {{ /partial:components.heading }}
 
             {{ partial:components.lead }}
-                Adventure starts where the road ends
+                {{ lead }}
             {{ /partial:components.lead }}
 
+            {{ partial:components.article_image :image="assets_field" }}
+
             {{ partial:components.text }}
-                Discover the most beautiful roads and hidden places in Northern Thailand.
+                {{ content }}
             {{ /partial:components.text }}    
             
             {{ partial:components.label }}
-                Chiang Mai
+                {{ label }}                
             {{ /partial:components.label }}
 
     </div>

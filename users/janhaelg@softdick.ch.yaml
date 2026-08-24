@@ -2,3 +2,7 @@ name: 'Jan Haelg'
 super: true
 id: 7404e32d-858b-49fc-8c91-a3cc3da6aaf1
 password_hash: $2y$12$Q9HsR1C9sknVdekoW.DBMe/c8XvU36bv3FNuV3BMVcZIS9SbaMCUa
+preferences:
+  collections:
+    pages:
+      view: tree
