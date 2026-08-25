@@ -1,0 +1,21 @@
+title: imagery
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: logo
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: Logo
+          -
+            handle: favicon
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: Favicon
