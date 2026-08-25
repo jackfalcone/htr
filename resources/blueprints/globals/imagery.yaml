@@ -26,3 +26,10 @@ tabs:
               max_files: 1
               type: assets
               display: 'WA Icon'
+          -
+            handle: insta
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: Insta
