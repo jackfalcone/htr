@@ -19,3 +19,10 @@ tabs:
               max_files: 1
               type: assets
               display: Favicon
+          -
+            handle: wa_icon
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: 'WA Icon'

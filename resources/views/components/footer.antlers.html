@@ -1,0 +1,19 @@
+<footer class="bg-gray-900 text-white py-10">
+    <div class="max-w-6xl mx-auto px-4">
+        <!-- Your normal footer links, copyright, and content go here -->
+        <p>&copy; {{ now format="Y" }} All rights reserved.</p>
+        
+        <!-- Sticky WhatsApp CTA -->
+        <!-- Placed here for clean organization, but rendered fixed to the screen corner -->
+        <a href="https://wa.me." 
+        class="fixed bottom-5 right-5 z-50 w-10 h-10 md:w-16 md:h-16 transition-transform duration-200 ease-in-out hover:scale-110 active:scale-95"
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Chat on WhatsApp">
+            
+            <img src="{{ imagery:wa_icon:url }}" 
+                alt="WhatsApp Chat" 
+                class="w-full h-full object-contain drop-shadow-md">
+        </a>
+    </div>
+</footer>
