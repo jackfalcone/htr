@@ -1,0 +1,17 @@
+title: 'social media'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: insta_url
+            field:
+              type: text
+              display: 'Insta Url'
+          -
+            handle: fb_url
+            field:
+              type: text
+              display: 'FB Url'
