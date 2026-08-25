@@ -33,3 +33,10 @@ tabs:
               max_files: 1
               type: assets
               display: Insta
+          -
+            handle: fb
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: fb

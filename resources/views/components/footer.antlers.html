@@ -1,15 +1,20 @@
 <footer class="bg-gray-900 text-white pt-8 pb-5">
-    <a href="">
-        <img src="{{ imagery:insta:url }}" class="w-12 mx-auto">
-    </a>
+    <div class="flex justify-center max-w-125 mx-auto">
+        <a href="" class="px-4">
+            <img src="{{ imagery:insta:url }}" class="w-8 mx-auto">
+        </a>
+        <a href="" class="px-4">
+            <img src="{{ imagery:fb:url }}" class="w-8 mx-auto">
+        </a>
+    </div>
     <div class="max-w-6xl mx-auto px-4">
         <!-- Your normal footer links, copyright, and content go here -->
         <p>&copy; {{ now format="Y" }} All rights reserved.</p>
         
         <!-- Sticky WhatsApp CTA -->
         <!-- Placed here for clean organization, but rendered fixed to the screen corner -->
-        <a href="https://wa.me." 
-        class="fixed bottom-5 right-5 z-50 w-10 h-10 md:w-14 md:h-14 transition-transform duration-200 ease-in-out hover:scale-110 active:scale-95"
+        <a href="https://wa.me/+41786178829" 
+        class="fixed bottom-5 right-5 z-50 w-10 h-10 transition-transform duration-200 ease-in-out hover:scale-110 active:scale-95"
         target="_blank" 
         rel="noopener noreferrer" 
         aria-label="Chat on WhatsApp">
