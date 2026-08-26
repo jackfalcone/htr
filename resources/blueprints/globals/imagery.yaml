@@ -40,3 +40,10 @@ tabs:
               max_files: 1
               type: assets
               display: fb
+          -
+            handle: line_icon
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: 'Line Icon'

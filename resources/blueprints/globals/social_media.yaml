@@ -15,3 +15,13 @@ tabs:
             field:
               type: text
               display: 'FB Url'
+          -
+            handle: wa_url
+            field:
+              type: text
+              display: 'WA Url'
+          -
+            handle: line_url
+            field:
+              type: text
+              display: 'Line Url'

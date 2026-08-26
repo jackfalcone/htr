@@ -6,6 +6,12 @@
         <a href="{{ social_media:fb_url }}" target="_blank" class="px-4">
             <img src="{{ imagery:fb:url }}" class="w-8 mx-auto">
         </a>
+        <a href="{{ social_media:wa_url }}" target="_blank" class="px-4">
+            <img src="{{ imagery:wa_icon:url }}" class="w-8 mx-auto">
+        </a>
+        <a href="{{ social_media:line_url }}" target="_blank" class="px-4">
+            <img src="{{ imagery:line_icon:url }}" class="w-8 mx-auto">
+        </a>
     </div>
     <div class="max-w-6xl mx-auto px-4">
         <!-- Your normal footer links, copyright, and content go here -->
@@ -13,15 +19,15 @@
         
         <!-- Sticky WhatsApp CTA -->
         <!-- Placed here for clean organization, but rendered fixed to the screen corner -->
-        <a href="https://wa.me/+41786178829" 
-        class="fixed bottom-5 right-5 z-50 w-10 h-10 transition-transform duration-200 ease-in-out hover:scale-110 active:scale-95"
+        <a href="/" 
+        class="fixed bottom-5 right-5 z-50 w-16 h-16 transition-transform duration-200 ease-in-out hover:scale-110 active:scale-95"
         target="_blank" 
-        rel="noopener noreferrer" 
-        aria-label="Chat on WhatsApp">
+        rel="noopener noreferrer" >
             
-            <img src="{{ imagery:wa_icon:url }}" 
+            <img src="{{ booking:icon:url }}" 
                 alt="WhatsApp Chat" 
                 class="w-full h-full object-contain drop-shadow-md">
         </a>
+        <span class="fixed bottom-9 right-1 z-50 w-22 h-17 text-xs font-bold uppercase tracking-wider text-[#a7a705]">{{ booking:text }}</span>
     </div>
 </footer>
