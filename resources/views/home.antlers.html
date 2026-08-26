@@ -1,5 +1,5 @@
 <div class="mt-6 min-h-screen">
-    <div class="max-w-lg w-full mx-auto mt-3 mb-12">
+    <div class="w-full mx-auto mt-3 mb-12">
             {{ partial:components.heading }}
                 {{ title }}
             {{ /partial:components.heading }}
@@ -11,7 +11,7 @@
             {{ partial:components.article_image :image="assets_field" }}
 
             {{ partial:components.text }}
-                {{ content }}
+                {{ content | nl2br }}
             {{ /partial:components.text }}    
             
             {{ partial:components.label }}
