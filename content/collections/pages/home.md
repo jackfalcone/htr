@@ -5,8 +5,8 @@ title: "RIDE WHERE OTHERS DON'T"
 template: home
 lead: 'Northern Thailand motorcycle adventures'
 updated_by: 7404e32d-858b-49fc-8c91-a3cc3da6aaf1
-updated_at: 1787729663
-label: 'Chiang Mai'
+updated_at: 1787731032
+label: 'BASED IN CHIANG MAI'
 assets_field: ash-edmonds-rs79mxpuqay-unsplash.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur lacinia ligula, ****vel sagittis arcu aliquet**** quis. Etiam sed purus lectus. Praesent mattis dapibus leo, eu fringilla sem placerat ac. Aliquam blandit vitae libero eu auctor. Mauris a quam metus. Suspendisse nec lorem purus. Donec in tempor dolor. Vivamus sit amet dui cursus, hendrerit leo sed, hendrerit ex. Quisque aliquam urna a arcu euismod luctus. Cras eu lobortis turpis. Praesent tortor risus, imperdiet in tempor sit amet, commodo at mi. Praesent in augue ut eros scelerisque ullamcorper. Phasellus auctor felis ante, eu vehicula odio pellentesque sed. Aliquam nec est eros.
