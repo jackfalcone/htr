@@ -1,40 +1,91 @@
-<div x-data="{ open: false }" class="sticky top-0 z-50 bg-white/85 backdrop-blur-lg border-b border-gray-200/50">
-  <div class="max-w-7xl mx-auto">
-    <div class="flex justify-between h-16 items-center">
-      
-      <!-- Logo -->
-      <div class="shrink-0">   
-        <a href="/" class="font-bold text-xl text-gray-800"><img src="{{ imagery:logo:url }}" class="w-26 pl-3"></a>
+<div x-data="{ open: false }"
+     class="sticky top-0 z-50 border-b border-orange-600/15 bg-[#fff]/88 shadow-[0_4px_24px_-18px_rgba(194,65,12,0.35)] backdrop-blur-xl">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+    <!-- ===== Top Row: Logo + Menu ===== -->
+    <div class="flex justify-between items-center h-20">
+
+      <!-- Logo (with micro tagline hidden on small screens) -->
+      <div class="shrink-0">
+        <a href="/" class="flex flex-col justify-center h-16 pl-1">
+          <img src="{{ imagery:logo:url }}" alt="Hilltribe Riders" class="h-10 w-auto sm:h-11">
+          <span class="hidden lg:block mt-0.5 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-[#a7a705]">
+            Northern Thailand
+          </span>
+        </a>
       </div>
 
       <!-- Desktop Menu -->
-      <nav class="hidden md:flex space-x-8">
+      <nav class="hidden md:flex items-center gap-8 lg:gap-10">
         {{ nav:header }}
-          <a href="{{ url }}" class="text-gray-600 hover:text-gray-900 {{ is_current ? 'font-semibold text-blue-600' : '' }}">
-            {{ title }}
+          <a href="{{ url }}"
+             class="group relative inline-flex items-center h-16 font-medium text-[15px] tracking-wide transition-colors duration-150
+                    {{ is_current ? 'text-[#fd6118]' : 'text-gray-700 hover:text-[#fd6118]' }}">
+            <span class="relative">
+              {{ title }}
+              <!-- Animated "winding road" underline -->
+              <span
+                class="pointer-events-none absolute -bottom-1.5 left-0 right-0 h-[3px] overflow-hidden rounded-full
+                       {{ is_current ? 'opacity-100' : 'opacity-0 group-hover:opacity-100' }}
+                       transition-opacity duration-200">
+                <span
+                  class="block h-full w-full bg-[repeating-linear-gradient(90deg,#fd6118_0_8px,transparent_8px_12px)]
+                         translate-x-[-100%] group-hover:translate-x-0 {{ is_current ? '!translate-x-0' : '' }}
+                         transition-transform duration-500 ease-out">
+                </span>
+              </span>
+            </span>
           </a>
         {{ /nav:header }}
       </nav>
 
-      <!-- Hamburger Button -->
-      <div class="flex md:hidden">
-        <button @click="open = !open" type="button" class="text-gray-600 hover:text-gray-900 focus:outline-none p-2" aria-label="Toggle Menu">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      <!-- Hamburger + "MENU" label -->
+      <div class="flex items-center md:hidden">
+        <button
+          @click="open = !open"
+          type="button"
+          class="group flex items-center gap-2 rounded-xl px-2 py-2 text-gray-700 transition-colors hover:text-[#fd6118] focus:outline-none"
+          aria-label="Toggle Menu"
+          :aria-expanded="open">
+          <span class="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#a7a705]">
+            Menu
+          </span>
+          <svg class="h-6 w-6 transition-transform duration-200 group-hover:scale-105" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16" />
+            <path x-show="open"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
-
     </div>
   </div>
 
-  <!-- Mobile Menu Dropdown -->
-  <div x-show="open" class="md:hidden px-4 pt-2 pb-4 space-y-1 bg-white border-b border-gray-200">
-    {{ nav:header }}
-      <a href="{{ url }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 {{ is_current ? 'bg-blue-50 text-blue-600' : '' }}">
-        {{ title }}
-      </a>
-    {{ /nav:header }}
+  <!-- ===== Mobile Menu Dropdown ===== -->
+  <div
+    x-show="open"
+    x-transition:enter="transition ease-out duration-150"
+    x-transition:enter-start="opacity-0 -translate-y-1"
+    x-transition:enter-end="opacity-100 translate-y-0"
+    x-transition:leave="transition ease-in duration-100"
+    x-transition:leave-start="opacity-100 translate-y-0"
+    x-transition:leave-end="opacity-0 -translate-y-1"
+    class="md:hidden border-t border-gray-200/70 bg-white/95 backdrop-blur-lg">
+
+    <div class="px-2 pb-4 space-y-0.5">
+      {{ nav:header }}
+        <a href="{{ url }}"
+           class="group block rounded-xl px-4 py-3 text-[15px] font-medium transition
+                  {{ is_current ? 'bg-orange-50 text-[#fd6118]' : 'text-gray-800 hover:bg-orange-50/60 hover:text-[#fd6118]' }}">
+          <div class="flex items-center justify-between gap-3">
+            <span>{{ title }}</span>
+            <span
+              class="h-[3px] w-10 rounded-full opacity-0 transition
+                     {{ is_current ? 'opacity-100' : 'group-hover:opacity-70' }}"
+              style="background: repeating-linear-gradient(90deg,#fd6118 0 6px,transparent 6px 10px);">
+            </span>
+          </div>
+        </a>
+      {{ /nav:header }}
+
+    </div>
   </div>
 </div>
