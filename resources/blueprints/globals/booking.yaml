@@ -10,10 +10,3 @@ tabs:
             field:
               type: text
               display: text
-          -
-            handle: icon
-            field:
-              container: assets
-              max_files: 1
-              type: assets
-              display: icon
