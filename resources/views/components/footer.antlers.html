@@ -1,4 +1,4 @@
-<footer class="bg-gray-900 text-white pt-8 pb-5">
+<footer class="bg-gray-900 text-white pt-8 pb-24">
     <div class="flex justify-center max-w-125 mx-auto">
         <a href="{{ social_media:insta_url }}" target="_blank" class="px-4">
             <img src="{{ imagery:insta:url }}" class="w-8 mx-auto">
@@ -14,20 +14,43 @@
         </a>
     </div>
     <div class="max-w-6xl mx-auto px-4">
-        <!-- Your normal footer links, copyright, and content go here -->
         <p>&copy; {{ now format="Y" }} All rights reserved.</p>
-        
-        <!-- Sticky WhatsApp CTA -->
-        <!-- Placed here for clean organization, but rendered fixed to the screen corner -->
-        <a href="/" 
-        class="fixed bottom-5 right-5 z-50 w-16 h-16 transition-transform duration-200 ease-in-out hover:scale-110 active:scale-95"
-        target="_blank" 
-        rel="noopener noreferrer" >
-            
-            <img src="{{ booking:icon:url }}" 
-                alt="WhatsApp Chat" 
-                class="w-full h-full object-contain drop-shadow-md">
+
+        <!-- Sticky Booking CTA -->
+        <a href="/"
+           class="booking-cta fixed bottom-5 right-5 z-50 no-underline group"
+           target="_blank"
+           rel="noopener noreferrer">
+            <div class="booking-cta-glass pl-3 pr-4 py-2.5 flex items-center gap-3">
+                <!-- Adventure Icon: Mountain + Winding Road -->
+                <div class="relative shrink-0 w-11 h-11 rounded-full bg-white/15 border border-white/25 flex items-center justify-center overflow-hidden">
+                    <svg class="w-8 h-8" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Mountain silhouette (northern Thailand) -->
+                        <path d="M4 52 L18 30 L28 44 L40 20 L52 40 L60 52 Z"
+                              fill="rgba(255,255,255,0.92)"/>
+                        <path d="M4 54 L60 54"
+                              stroke="rgba(255,255,255,0.92)" stroke-width="2.5" stroke-linecap="round"/>
+                        <!-- Winding road (dashed animated) -->
+                        <path class="booking-cta-road"
+                              d="M14 52 C 20 46, 22 46, 26 42 S 34 34, 38 30 S 48 22, 52 18"
+                              stroke="#fff1a8" stroke-width="2.2" stroke-linecap="round"
+                              fill="none"/>
+                    </svg>
+                </div>
+
+                <!-- Text -->
+                <div class="flex flex-col leading-tight pr-0.5">
+                    <span class="font-display text-[1.65rem] text-white tracking-wider uppercase whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">
+                        {{ booking:text }}
+                    </span>
+                </div>
+
+                <!-- Arrow -->
+                <svg class="booking-cta-arrow w-6 h-6 text-white shrink-0 drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/>
+                    <path d="M13 5l7 7-7 7"/>
+                </svg>
+            </div>
         </a>
-        <span class="fixed bottom-9 right-1 z-50 w-22 h-17 text-xs font-bold uppercase tracking-wider text-[#a7a705]">{{ booking:text }}</span>
     </div>
 </footer>

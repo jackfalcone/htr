@@ -7,4 +7,80 @@
 @theme {
     --font-sans: 'Manrope', sans-serif;
     --font-display: 'Bebas Neue', sans-serif;
-} 
+}
+
+/* ===== Hilltribe Riders Sticky Booking CTA ===== */
+
+@keyframes cta-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+@keyframes cta-glow-pulse {
+    0%, 100% {
+        box-shadow:
+            0 10px 30px -5px rgba(255, 102, 0, 0.45),
+            0 4px 14px -4px rgba(217, 119, 6, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+    50% {
+        box-shadow:
+            0 14px 40px -5px rgba(255, 102, 0, 0.6),
+            0 6px 20px -4px rgba(217, 119, 6, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes road-draw {
+    0% { stroke-dashoffset: 60; }
+    100% { stroke-dashoffset: 0; }
+}
+
+@keyframes arrow-slide {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+}
+
+.booking-cta {
+    animation: cta-float 3.2s ease-in-out infinite;
+}
+
+.booking-cta-glass {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 102, 0, 0.92) 0%,
+        rgba(249, 115, 22, 0.90) 35%,
+        rgba(234, 88, 12, 0.92) 70%,
+        rgba(194, 65, 12, 0.94) 100%
+    );
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1.5px solid rgba(255, 237, 213, 0.45);
+    border-radius: 9999px;
+    animation: cta-glow-pulse 3.2s ease-in-out infinite;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.booking-cta:hover .booking-cta-glass {
+    transform: scale(1.04);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 120, 20, 0.95) 0%,
+        rgba(255, 140, 50, 0.93) 35%,
+        rgba(249, 115, 22, 0.94) 70%,
+        rgba(217, 80, 20, 0.96) 100%
+    );
+}
+
+.booking-cta:active .booking-cta-glass {
+    transform: scale(0.98);
+}
+
+.booking-cta-arrow {
+    animation: arrow-slide 1.8s ease-in-out infinite;
+}
+
+.booking-cta-road {
+    stroke-dasharray: 4 3;
+    animation: road-draw 2.4s linear infinite;
+}
